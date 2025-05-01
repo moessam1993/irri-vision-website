@@ -3,8 +3,8 @@ import { Contact } from "./contact.model";
 
 export const createMessage = async (req: Request, res: Response) => {
   try {
-    const { name, email, message } = req.body;
-    const newMessage = new Contact({ name, email, message });
+    
+    const newMessage = new Contact(req.body);
     await newMessage.save();
     res.status(201).json({ message: "Message sent successfully" });
   } catch (error) {
