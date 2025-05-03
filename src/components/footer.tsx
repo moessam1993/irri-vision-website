@@ -32,7 +32,6 @@ const Footer: React.FC = () => {
           title: 'Email copied!',
           text: 'Feel free to send us your inquiry or CV. We look forward to hearing from you!',
           icon: 'success',
-          font: 'semibold',
           confirmButtonColor: '#306E80',
           confirmButtonText: 'Got it!',
           timer: 6000,
