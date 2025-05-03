@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link} from 'react-router-dom';
+import { NavLink} from 'react-router-dom';
 import irri from "../assets/IRRI.svg"
 import { useNavigate } from 'react-router';
 import now from "../assets/join.png";
@@ -21,18 +21,63 @@ const Navbar: React.FC = () => {
       <div className="flex items-center ml-10"
       onClick={handleLogoClick}
       >
-        <img src={irri} alt="IRRI Logo" className="h-10 w-10 mr-2" />
-        <div className="text-[25px] font-bold text-[#195769] font-inter">IRRI Vision</div>
+        <img src={irri} alt="IRRI Logo" className="h-10 w-10 mr-2 hover:scale-120" />
+        <div className="text-[25px] font-bold text-[#195769] font-inter hover:scale-110 ml-2">IRRI Vision</div>
       </div>
       
-      <div className="flex-1 flex justify-end mr-8"> {/* Added flex-1 and justify-end */}
-        <div className="hidden md:flex space-x-8">
-          <Link to="/" className="text-gray-700 hover:text-[#306E80] font-inter font-semibold transition-colors duration-200">Home</Link>
-          <Link to="/products" className="text-gray-700 hover:text-[#306E80] font-inter font-semibold transition-colors duration-200">Products & Solutions</Link>
-          <Link to="/blog" className="text-gray-700 hover:text-[#306E80] font-inter font-semibold transition-colors duration-200">Blog</Link>
-          <Link to="/careers" className="text-gray-700 hover:text-[#306E80] font-inter font-semibold transition-colors duration-200">Careers</Link>
-          <Link to="/about-us" className="text-gray-700 hover:text-[#306E80] font-inter font-semibold transition-colors duration-200">About Us</Link>
-        </div>
+      <div className="flex-1 flex justify-end mr-8"> 
+      <div className="hidden md:flex space-x-8">
+  <NavLink 
+    to="/" 
+    className={({ isActive }) => 
+      `font-inter font-semibold transition-colors duration-200 ${
+        isActive ? 'text-[#306E80]' : 'text-gray-700 hover:text-[#306E80]'
+      }`
+    }
+  >
+    Home
+  </NavLink>
+  <NavLink 
+    to="/products" 
+    className={({ isActive }) => 
+      `font-inter font-semibold transition-colors duration-200 ${
+        isActive ? 'text-[#306E80]' : 'text-gray-700 hover:text-[#306E80]'
+      }`
+    }
+  >
+    Products & Solutions
+  </NavLink>
+  <NavLink 
+    to="/blog" 
+    className={({ isActive }) => 
+      `font-inter font-semibold transition-colors duration-200 ${
+        isActive ? 'text-[#306E80]' : 'text-gray-700 hover:text-[#306E80]'
+      }`
+    }
+  >
+    Blog
+  </NavLink>
+  <NavLink 
+    to="/careers" 
+    className={({ isActive }) => 
+      `font-inter font-semibold transition-colors duration-200 ${
+        isActive ? 'text-[#306E80]' : 'text-gray-700 hover:text-[#306E80]'
+      }`
+    }
+  >
+    Careers
+  </NavLink>
+  <NavLink 
+    to="/about-us" 
+    className={({ isActive }) => 
+      `font-inter font-semibold transition-colors duration-200 ${
+        isActive ? 'text-[#306E80]' : 'text-gray-700 hover:text-[#306E80]'
+      }`
+    }
+  >
+    About Us
+  </NavLink>
+</div>
       </div>
       
       <div className="flex space-x-3">

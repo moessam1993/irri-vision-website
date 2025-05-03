@@ -64,7 +64,9 @@ const Blog = () => {
         </h3>
         <p className="text-lg text-gray-700 mb-4">
           At IRRI Vision, we believe that innovation starts with a strong, connected team. This month, we
-          hosted our first-ever team-building event, bringing together our talented interns and core team
+          hosted our 
+          <span className='font-semibold'> First Team-Building Event</span>
+          , bringing together our talented interns and core team
           members for a day of connection, creativity, and collaboration.
         </p>
         <p className="text-lg text-gray-700 mb-4">
@@ -80,7 +82,7 @@ const Blog = () => {
           mentorship, open discussions, and the sharing of new ideas that will fuel our projects moving
           forward.
         </p>
-        <p className="text-lg text-gray-700 mb-4">
+        <p className="text-lg text-gray-700 mb-4 font-semibold">
           At IRRI Vision, we don't just build technologies — we build people.
         </p>
         <p className="text-lg text-gray-700">
@@ -89,7 +91,7 @@ const Blog = () => {
           committed to creating an environment where creativity thrives, collaboration is second nature,
           and every team member plays a vital role in shaping the future of ophthalmology.
         </p>
-        <p className="text-lg text-gray-700 mt-4">
+        <p className="text-lg text-gray-700 mt-4 font-semibold">
           Stay tuned for more updates as we continue our journey!
         </p>
         
@@ -131,7 +133,7 @@ const Blog = () => {
   }
 
   return (
-    <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 lg:py-20 font-inter">
+    <div className="max-w-full mx-auto px-4 ml-15 mr-15 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 lg:py-20 font-inter">
       {/* Image Modal */}
       {selectedImage && (
         <div 
