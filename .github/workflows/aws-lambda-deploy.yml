@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     
     steps:
     - name: Checkout repository
@@ -32,7 +32,8 @@ jobs:
       run: npm run build
         
     - name: Zip the function code
-      run: Compress-Archive -Path ./dist/* -DestinationPath function.zip -Force
+      run: |
+        cd dist && zip -r ../function.zip ./*
 
     - name: Deploy to AWS Lambda
       run: |
