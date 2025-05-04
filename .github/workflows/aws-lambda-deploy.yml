@@ -26,17 +26,18 @@ jobs:
         aws-region: ${{ secrets.AWS_REGION }}
 
     - name: Install dependencies
-      working-directory: ./backend
-      run: npm install
+      run: |
+        cd backend
+        npm install
 
     - name: Build
-      working-directory: ./backend
       run: |
+        cd backend
         npm run build
         
     - name: Zip the function code
-      working-directory: ./backend
       run: |
+        cd backend
         Compress-Archive -Path ./dist/* -DestinationPath function.zip -Force
 
     - name: Deploy to AWS Lambda
