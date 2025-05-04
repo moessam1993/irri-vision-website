@@ -26,12 +26,16 @@ jobs:
         aws-region: ${{ secrets.AWS_REGION }}
 
     - name: Install dependencies
+      working-directory: ./backend
       run: npm install
 
     - name: Build
-      run: npm run build
-
+      working-directory: ./backend
+      run: |
+        npm run build
+        
     - name: Zip the function code
+      working-directory: ./backend
       run: |
         Compress-Archive -Path ./dist/* -DestinationPath function.zip -Force
 
