@@ -142,7 +142,7 @@ const Contact = () => {
         </section>
 
         {/* Contact Form Section */}
-        <section className="w-full py-12 md:py-16 px-4 sm:px-6">
+        <section className="w-full bg-white py-12 md:py-16 px-4 sm:px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-8 md:mb-12 hidden-on-scroll fade-in-up animate-on-load">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#195769]">
@@ -154,7 +154,7 @@ const Contact = () => {
             </div>
 
             <div className="flex justify-center">
-              <div className="w-full bg-white p-6 md:p-8 rounded-xl shadow-md border border-gray-100 hidden-on-scroll fade-in-up animate-on-load">
+              <div className="w-full bg-white p-6 md:p-8 rounded-xl shadow-md border border-gray-100 hidden-on-scroll  fade-in-up animate-on-load">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
