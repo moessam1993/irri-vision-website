@@ -6,7 +6,7 @@ interface ContactFormData {
 }
 
 export const submitContactForm = async (formData: ContactFormData): Promise<{ message: string }> => {
-  const apiUrl = 'http://localhost:5000/api/contact';
+  const apiUrl = 'https://aulqtsnpan4mfyrisj5tsacetm0vkcoz.lambda-url.us-east-1.on.aws/api/contact';
   console.log('[ContactService] Attempting to submit form data to:', apiUrl);
   console.log('[ContactService] Request payload:', formData);
 
