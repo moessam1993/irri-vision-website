@@ -7,7 +7,6 @@ import qumra from "../assets/qumra.png";
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router';
 
-
 const Products = () => {
   useEffect(() => {
     const elements = document.querySelectorAll(".animate-on-load");
@@ -28,7 +27,6 @@ const Products = () => {
     navigate("/contact-us");
   };
 
-
   const showComingSoonAlert = (productName: string) => {
     Swal.fire({
       title: `${productName} Coming Soon!`,
@@ -48,9 +46,9 @@ const Products = () => {
   };
 
   return (
-    <div className="max-w-8xl mx-auto px-4 sm:px-6 py-12 md:py-16 lg:py-20 font-inter">
+    <div className="max-w-8xl mx-auto px-6 sm:px-8 lg:px-10 py-12 md:py-16 lg:py-20 font-inter">
       {/* Header Section */}
-      <div className="flex flex-col items-center justify-center mb-16 md:mb-24">
+      <div className="flex flex-col items-center justify-center mb-16 md:mb-24 px-4">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#195769] mb-6 md:mb-8 mt-6 md:mt-10 text-center hidden-on-scroll fade-in-up animate-on-load">
           Products & Solutions
         </h1>
@@ -62,10 +60,10 @@ const Products = () => {
       </div>
 
       {/* OQfy Product */}
-      <div className="mb-24 md:mb-32 lg:mb-40 mx-4 sm:mx-6 md:mx-12 lg:mx-16 xl:mx-24 2xl:mx-32">
+      <div className="mb-24 md:mb-32 lg:mb-40 px-6 sm:px-8 lg:px-12">
         <div className="flex flex-col md:flex-row gap-8 lg:gap-12 items-center">
           {/* Text Content */}
-          <div className="flex-1 order-2 md:order-1 hidden-on-scroll slide-in-left animate-on-load">
+          <div className="flex-1 order-2 md:order-1 hidden-on-scroll slide-in-left animate-on-load px-4">
             <div className="mb-4">
               <h2 className="text-lg md:text-xl lg:text-2xl font-semibold text-black font-serif">
                 OQfy - Intelligent EMR for Ophthalmology
@@ -91,7 +89,7 @@ const Products = () => {
             </div>
           </div>
           {/* Image */}
-          <div className="flex-1 order-1 md:order-2 flex justify-center hidden-on-scroll slide-in-right animate-on-load">
+          <div className="flex-1 order-1 md:order-2 flex justify-center hidden-on-scroll slide-in-right animate-on-load px-4">
             <img 
               src={oqfy} 
               alt="OQfy product image" 
@@ -102,10 +100,10 @@ const Products = () => {
       </div>
 
       {/* NON-AI Product - Reversed Layout */}
-      <div className="mb-24 md:mb-32 lg:mb-40 mx-4 sm:mx-6 md:mx-12 lg:mx-16 xl:mx-24 2xl:mx-32">
+      <div className="mb-24 md:mb-32 lg:mb-40 px-6 sm:px-8 lg:px-12">
         <div className="flex flex-col md:flex-row gap-8 lg:gap-12 items-center">
           {/* Image */}
-          <div className="flex-1 flex justify-center hidden-on-scroll slide-in-left animate-on-load">
+          <div className="flex-1 flex justify-center hidden-on-scroll slide-in-left animate-on-load px-4">
             <img 
               src={nonai} 
               alt="NON-AI product image" 
@@ -113,7 +111,7 @@ const Products = () => {
             />
           </div>
           {/* Text Content - Right-aligned */}
-          <div className="flex-1 flex flex-col items-start md:items-end text-left md:text-right hidden-on-scroll slide-in-right animate-on-load">
+          <div className="flex-1 flex flex-col items-start md:items-end text-left md:text-right hidden-on-scroll slide-in-right animate-on-load px-4">
             <div className="mb-4 w-full">
               <h2 className="text-lg md:text-xl lg:text-2xl font-semibold text-black font-serif">
                 NON-AI - Neural Ocular Network-AI
@@ -143,10 +141,10 @@ const Products = () => {
       </div>
 
       {/* QUMRA Product */}
-      <div className="mb-24 md:mb-32 lg:mb-40 mx-4 sm:mx-6 md:mx-12 lg:mx-16 xl:mx-24 2xl:mx-32">
+      <div className="mb-24 md:mb-32 lg:mb-40 px-6 sm:px-8 lg:px-12">
         <div className="flex flex-col md:flex-row gap-8 lg:gap-12 items-center">
           {/* Text Content */}
-          <div className="flex-1 order-2 md:order-1 hidden-on-scroll slide-in-left animate-on-load">
+          <div className="flex-1 order-2 md:order-1 hidden-on-scroll slide-in-left animate-on-load px-4">
             <div className="mb-4">
               <h2 className="text-lg md:text-xl lg:text-2xl font-semibold text-black font-serif">
                 Qumra - The Future of Tele-Ophthalmology
@@ -173,7 +171,7 @@ const Products = () => {
             </div>
           </div>
           {/* Image */}
-          <div className="flex-1 order-1 md:order-2 flex justify-center hidden-on-scroll slide-in-right animate-on-load">
+          <div className="flex-1 order-1 md:order-2 flex justify-center hidden-on-scroll slide-in-right animate-on-load px-4">
             <img 
               src={qumra} 
               alt="Qumra product image" 
