@@ -5,7 +5,7 @@ import { validateContact } from "./contact.validation";
 
 const router = express.Router();
 
-router.post("/contact", validateBody(validateContact), createMessage);
+router.post("/contact", createMessage);
 router.get("/contact", getAllMessage);
 
 export { router as contactRouter };
