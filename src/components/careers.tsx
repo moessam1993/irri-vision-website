@@ -83,35 +83,51 @@ const Careers: React.FC = () => {
               </h2>
             </div>
 
-            {/* Image Grid Section */}
-            <div className="w-full">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-                {/* Image 1 - Culture */}
-                <div className="flex justify-center hidden-on-scroll slide-in-left animate-on-load">
-                  <img 
-                    src={cult} 
-                    alt="Company Culture" 
-                    className="w-full max-w-full h-[280px] md:h-[300px] object-contain"
-                  />
+            {/* Interactive Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 px-4 sm:px-0">
+              {/* Card 1 - Innovative Work */}
+              <div className="group bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-[#FFFAE7] hover:border-[#195769] transform hover:-translate-y-1 cursor-pointer hidden-on-scroll fade-in-up animate-on-load">
+                <div className="flex items-center mb-4">
+                  <div className="bg-[#FFFAE7] p-3 rounded-lg group-hover:bg-[#195769] transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[#195769] group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  <h3 className="ml-4 text-lg font-semibold text-[#195769]">Innovative Work</h3>
                 </div>
-                
-                {/* Image 2 - Impact */}
-                <div className="flex justify-center hidden-on-scroll slide-in-right animate-on-load">
-                  <img 
-                    src={impact} 
-                    alt="Company Impact" 
-                    className="w-full max-w-full h-[280px] md:h-[300px] object-contain"
-                  />
+                <p className="text-sm md:text-base text-[#4D4D4D]">
+                  You'll collaborate on breakthrough technologies in diagnostics, imaging, and AI development.
+                </p>
+              </div>
+
+              {/* Card 2 - Learning Culture */}
+              <div className="group bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-[#FFFAE7] hover:border-[#195769] transform hover:-translate-y-1 cursor-pointer hidden-on-scroll fade-in-up animate-on-load" style={{ animationDelay: "0.2s" }}>
+                <div className="flex items-center mb-4">
+                  <div className="bg-[#FFFAE7] p-3 rounded-lg group-hover:bg-[#195769] transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[#195769] group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                    </svg>
+                  </div>
+                  <h3 className="ml-4 text-lg font-semibold text-[#195769]">Learning Culture</h3>
                 </div>
-                
-                {/* Image 3 - Work */}
-                <div className="flex justify-center md:col-span-2 hidden-on-scroll fade-in-up animate-on-load">
-                  <img 
-                    src={work} 
-                    alt="Work Environment" 
-                    className="w-full max-w-full h-[280px] md:h-[300px] object-contain"
-                  />
+                <p className="text-sm md:text-base text-[#4D4D4D]">
+                  Our diverse team of engineers, clinicians, and researchers fosters continuous learning and cross-disciplinary growth.
+                </p>
+              </div>
+
+              {/* Card 3 - Real Impact */}
+              <div className="group bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-[#FFFAE7] hover:border-[#195769] transform hover:-translate-y-1 cursor-pointer hidden-on-scroll fade-in-up animate-on-load" style={{ animationDelay: "0.4s" }}>
+                <div className="flex items-center mb-4">
+                  <div className="bg-[#FFFAE7] p-3 rounded-lg group-hover:bg-[#195769] transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[#195769] group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                  </div>
+                  <h3 className="ml-4 text-lg font-semibold text-[#195769]">Real Impact</h3>
                 </div>
+                <p className="text-sm md:text-base text-[#4D4D4D]">
+                  Your work will directly improve the lives of patients and the efficiency of healthcare providers across the globe.
+                </p>
               </div>
             </div>
           </div>
