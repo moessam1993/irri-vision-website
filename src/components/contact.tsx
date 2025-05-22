@@ -8,6 +8,7 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phoneNumber: '',
     project: '',
     message: '',
   });
@@ -53,10 +54,15 @@ const Contact = () => {
     }));
   };
 
+  const validateEmail = (email: string) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!formData.name || !formData.email || !formData.project) {
+    if (!formData.name || !formData.email || !formData.phoneNumber || !formData.project) {
       Swal.fire({
         title: 'Missing Information',
         text: 'Please fill in all required fields',
@@ -69,6 +75,16 @@ const Contact = () => {
           no-repeat
         `,
         confirmButtonText: 'Got it!'
+      });
+      return;
+    }
+
+    if (!validateEmail(formData.email)) {
+      Swal.fire({
+        title: 'Invalid Email',
+        text: 'Please enter a valid email address',
+        icon: 'error',
+        confirmButtonColor: '#195769'
       });
       return;
     }
@@ -91,6 +107,7 @@ const Contact = () => {
       setFormData({
         name: '',
         email: '',
+        phoneNumber: '',
         project: '',
         message: '',
       });
@@ -110,7 +127,6 @@ const Contact = () => {
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">      
       <main className="flex-grow">
-        {/* Hero Section - Reduced padding and font sizes */}
         <section className="bg-gradient-to-b from-[#FFFAE7] to-white py-8 md:py-16 px-4 sm:px-6">
           <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-10">
             <div className="lg:w-1/2 flex flex-col items-start w-full hidden-on-scroll slide-in-left animate-on-load">
@@ -134,7 +150,6 @@ const Contact = () => {
           </div>
         </section>
 
-        {/* Contact Form Section - Reduced padding and sizes */}
         <section className="w-full bg-white py-8 md:py-12 px-4 sm:px-6">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-6 md:mb-10 hidden-on-scroll fade-in-up animate-on-load">
@@ -183,25 +198,43 @@ const Contact = () => {
                     </div>
                   </div>
 
-                  <div className="space-y-1">
-                    <label htmlFor="project" className="block text-xs font-medium text-gray-700">
-                      Project <span className="text-red-500">*</span>
-                    </label>
-                    <select
-                      id="project"
-                      name="project"
-                      value={formData.project}
-                      onChange={handleChange}
-                      className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-[#195769] focus:border-transparent transition-all appearance-none bg-white"
-                      required
-                    >
-                      <option value="">Select a project</option>
-                      {projectOptions.map((option) => (
-                        <option key={option.value} value={option.value}>
-                          {option.label}
-                        </option>
-                      ))}
-                    </select>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="space-y-1">
+                      <label htmlFor="phoneNumber" className="block text-xs font-medium text-gray-700">
+                        Phone Number <span className="text-red-500">*</span>
+                      </label>
+                      <input
+                        type="tel"
+                        id="phoneNumber"
+                        name="phoneNumber"
+                        value={formData.phoneNumber}
+                        onChange={handleChange}
+                        className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-[#195769] focus:border-transparent transition-all"
+                        placeholder="Your phone number"
+                        required
+                      />
+                    </div>
+
+                    <div className="space-y-1">
+                      <label htmlFor="project" className="block text-xs font-medium text-gray-700">
+                        Project <span className="text-red-500">*</span>
+                      </label>
+                      <select
+                        id="project"
+                        name="project"
+                        value={formData.project}
+                        onChange={handleChange}
+                        className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-[#195769] focus:border-transparent transition-all appearance-none bg-white"
+                        required
+                      >
+                        <option value="">Select a project</option>
+                        {projectOptions.map((option) => (
+                          <option key={option.value} value={option.value}>
+                            {option.label}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
                   </div>
 
                   <div className="space-y-1">
@@ -251,7 +284,6 @@ const Contact = () => {
           </div>
         </section>
 
-        {/* Additional Info Section - Reduced padding and sizes */}
         <section className="bg-gradient-to-b from-white to-[#FFFAE7] py-8 md:py-16 px-4 sm:px-6">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-8 hidden-on-scroll fade-in-up animate-on-load">

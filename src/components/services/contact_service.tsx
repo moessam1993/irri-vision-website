@@ -1,6 +1,7 @@
 interface ContactFormData {
   name: string;
   email: string;
+  phoneNumber: string;
   project: string;
   message: string;
 }
@@ -22,19 +23,13 @@ export const submitContactForm = async (formData: ContactFormData): Promise<{ me
 
     console.log('[ContactService] Received response, status:', response.status);
     
+    const responseData = await response.json();
+    
     if (!response.ok) {
-      console.warn('[ContactService] Response not OK, attempting to parse error...');
-      try {
-        const errorData = await response.json();
-        console.error('[ContactService] Error response data:', errorData);
-        throw new Error(errorData.message || `Server responded with status ${response.status}`);
-      } catch (parseError) {
-        console.error('[ContactService] Failed to parse error response:', parseError);
-        throw new Error(`Request failed with status ${response.status}`);
-      }
+      console.error('[ContactService] Error response data:', responseData);
+      throw new Error(responseData.message || `Server responded with status ${response.status}`);
     }
 
-    const responseData = await response.json();
     console.log('[ContactService] Successful response data:', responseData);
     return responseData;
   } catch (error) {
