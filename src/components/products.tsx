@@ -74,7 +74,7 @@ const Products = () => {
               "OQfy is a modern, ophthalmologist-centric electronic medical record (EMR) system. It helps clinicians manage appointments, document visits, schedule surgeries, and generate invoices, all while tracking essential performance metrics. Whether for solo clinics or large hospitals, OQfy offers a beautifully intuitive and friendly interface."
             </p>
             <div className="mt-4">
-              <button className="group relative overflow-hidden transition-transform duration-300 hover:scale-120 active:scale-95"
+              <button className="group relative cursor-pointer overflow-hidden transition-transform duration-300 hover:scale-120 active:scale-95"
               onClick={handleContactClick}
               >
                 <img 
@@ -123,7 +123,7 @@ const Products = () => {
             </p>
             <div className="mt-4">
               <button 
-                className="group relative overflow-hidden transition-transform duration-300 hover:scale-120 active:scale-95"
+                className="group relative overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-120 active:scale-95"
                 onClick={() => showComingSoonAlert("NON-AI")}
               >
                 <img 
@@ -164,7 +164,7 @@ const Products = () => {
                   alt="Learn more button" 
                   className="h-12 md:h-14 lg:h-16 w-auto object-cover" 
                 />
-                <span className="absolute inset-0 flex items-center justify-center text-white font-medium text-sm md:text-base opacity-0">
+                <span className="absolute inset-0 flex items-center cursor-pointer justify-center text-white font-medium text-sm md:text-base opacity-0">
                   Learn More
                 </span>
               </button>

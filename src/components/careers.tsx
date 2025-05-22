@@ -54,7 +54,7 @@ const Careers: React.FC = () => {
               <div className="flex justify-start w-full">
                 <button 
                   onClick={handleJoinClick}
-                  className="flex items-center justify-center gap-2 text-white bg-[#195769] px-4 py-2 text-sm rounded-md font-semibold hover:bg-[#134252] transition-all duration-200 min-w-[160px] transform hover:scale-105 focus:outline-none active:scale-95 shadow-sm hover:shadow-md"
+                  className="flex items-center justify-center gap-2 cursor-pointer text-white bg-[#195769] px-4 py-2 text-sm rounded-md font-semibold hover:bg-[#134252] transition-all duration-200 min-w-[160px] transform hover:scale-105 focus:outline-none active:scale-95 shadow-sm hover:shadow-md"
                 >
                   <img src={now} alt="loading" className="h-4 w-4" />
                   <span>Join us Now !</span>
@@ -86,7 +86,7 @@ const Careers: React.FC = () => {
             {/* Interactive Cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 px-4 sm:px-0">
               {/* Card 1 - Innovative Work */}
-              <div className="group bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-[#FFFAE7] hover:border-[#195769] transform hover:-translate-y-1 cursor-pointer hidden-on-scroll fade-in-up animate-on-load">
+              <div className="group bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-[#FFFAE7] hover:border-[#195769] transform hover:-translate-y-1  hidden-on-scroll fade-in-up animate-on-load">
                 <div className="flex items-center mb-4">
                   <div className="bg-[#FFFAE7] p-3 rounded-lg group-hover:bg-[#195769] transition-colors duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[#195769] group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -101,7 +101,7 @@ const Careers: React.FC = () => {
               </div>
 
               {/* Card 2 - Learning Culture */}
-              <div className="group bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-[#FFFAE7] hover:border-[#195769] transform hover:-translate-y-1 cursor-pointer hidden-on-scroll fade-in-up animate-on-load" style={{ animationDelay: "0.2s" }}>
+              <div className="group bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-[#FFFAE7] hover:border-[#195769] transform hover:-translate-y-1  hidden-on-scroll fade-in-up animate-on-load" style={{ animationDelay: "0.2s" }}>
                 <div className="flex items-center mb-4">
                   <div className="bg-[#FFFAE7] p-3 rounded-lg group-hover:bg-[#195769] transition-colors duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[#195769] group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -116,7 +116,7 @@ const Careers: React.FC = () => {
               </div>
 
               {/* Card 3 - Real Impact */}
-              <div className="group bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-[#FFFAE7] hover:border-[#195769] transform hover:-translate-y-1 cursor-pointer hidden-on-scroll fade-in-up animate-on-load" style={{ animationDelay: "0.4s" }}>
+              <div className="group bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-[#FFFAE7] hover:border-[#195769] transform hover:-translate-y-1  hidden-on-scroll fade-in-up animate-on-load" style={{ animationDelay: "0.4s" }}>
                 <div className="flex items-center mb-4">
                   <div className="bg-[#FFFAE7] p-3 rounded-lg group-hover:bg-[#195769] transition-colors duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[#195769] group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -146,7 +146,7 @@ const Careers: React.FC = () => {
               <div className="flex justify-start"> 
                 <button 
                   onClick={handleJoinClick}
-                  className="flex items-center justify-center gap-2 text-white bg-[#195769] px-4 py-2 text-sm rounded-md font-semibold hover:bg-[#134252] transition-all duration-200 min-w-[160px] transform hover:scale-105 focus:outline-none shadow-sm hover:shadow-md"
+                  className="flex items-center justify-center gap-2 cursor-pointer text-white bg-[#195769] px-4 py-2 text-sm rounded-md font-semibold hover:bg-[#134252] transition-all duration-200 min-w-[160px] transform hover:scale-105 focus:outline-none shadow-sm hover:shadow-md"
                 >
                   <img src={now} alt="loading" className="h-4 w-4" />
                   <span>Join us Now !</span>

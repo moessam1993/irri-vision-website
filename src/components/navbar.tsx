@@ -88,7 +88,7 @@ const Navbar: React.FC = () => {
       
       <div className="flex">
         <button 
-          className="flex items-center justify-center gap-2 text-white bg-[#195769] px-4 py-2 text-sm rounded font-semibold hover:bg-[#134252] transition-all duration-200 min-w-[102px] transform hover:scale-105 focus:outline-none active:scale-95"
+          className="flex items-center cursor-pointer justify-center gap-2 text-white bg-[#195769] px-4 py-2 text-sm rounded font-semibold hover:bg-[#134252] transition-all duration-200 min-w-[102px] transform hover:scale-105 focus:outline-none active:scale-95"
           onClick={handleJoinClick}
         >
           <img src={now} alt="Join icon" className="h-4 w-4" />

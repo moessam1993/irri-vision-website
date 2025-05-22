@@ -38,14 +38,14 @@ const LandingPage: React.FC = () => {
                 <div className="flex flex-col sm:flex-row gap-3 mt-6 lg:mt-8">
                   <button 
                     onClick={handleExploreClick}
-                    className="flex items-center justify-center gap-2 text-white bg-[#195769] px-4 py-2 text-sm rounded-md font-semibold hover:bg-[#134252] transition-all duration-200 min-w-[160px] transform hover:scale-105 focus:outline-none active:scale-95 shadow-sm hover:shadow-md"
+                    className="flex items-center  cursor-pointer justify-center gap-2 text-white bg-[#195769] px-4 py-2 text-sm rounded-md font-semibold hover:bg-[#134252] transition-all duration-200 min-w-[160px] transform hover:scale-105 focus:outline-none active:scale-95 shadow-sm hover:shadow-md"
                   >
                     <img src={loading} alt="loading" className="h-4 w-4 animate-spin" />
                     <span>Explore our products</span>
                   </button>
                   <button 
                     onClick={handleJoinClick}
-                    className="flex items-center justify-center gap-2 text-white bg-[#195769] px-4 py-2 text-sm rounded-md font-semibold hover:bg-[#134252] transition-all duration-200 min-w-[160px] transform hover:scale-105 focus:outline-none active:scale-95 shadow-sm hover:shadow-md"
+                    className="flex items-center cursor-pointer justify-center gap-2 text-white bg-[#195769] px-4 py-2 text-sm rounded-md font-semibold hover:bg-[#134252] transition-all duration-200 min-w-[160px] transform hover:scale-105 focus:outline-none active:scale-95 shadow-sm hover:shadow-md"
                   >
                     <img src={join} alt="Join icon" className="h-4 w-4" />
                     <span>Join the Mission</span>

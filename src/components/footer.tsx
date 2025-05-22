@@ -95,7 +95,7 @@ const Footer: React.FC = () => {
               placeholder="Your mail address"
               className="pl-3 pr-8 py-1 text-sm rounded-md bg-opacity-50 text-white w-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-300 focus:border-transparent placeholder-white placeholder-opacity-80"
             />
-            <button className="absolute right-0 p-1 rounded-r-md hover:scale-110 transition-transform">
+            <button className="absolute right-0 cursor-pointer p-1 rounded-r-md hover:scale-110 transition-transform">
               <img src={send} alt="Submit" className="w-3 h-3 filter brightness-0 invert" />
             </button>
           </div>

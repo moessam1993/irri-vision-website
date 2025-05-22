@@ -130,7 +130,7 @@ const Blog = () => {
       </div>
     ),
     "First Team-Building Event": (
-      <div className="px-4 py-3 sm:px-5 sm:py-4 bg-white/90 backdrop-blur-sm rounded-lg text-left shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1">
+      <div className="px-4 py-3 sm:px-5  sm:py-4 bg-white/90 backdrop-blur-sm rounded-lg text-left shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1">
         <h3 className="text-lg sm:text-xl font-semibold text-[#195769] mb-3 animate-fadeIn">
           Building the Future Together: IRRI Vision's First Team-Building Event
         </h3>
@@ -215,7 +215,7 @@ const Blog = () => {
           `
         }}
       >
-        {/* Floating circles with autonomous movement */}
+        {/* Floating circles with movement */}
         {circlePositions.current.map((circle, index) => (
           <div 
             key={index}
@@ -295,7 +295,7 @@ const Blog = () => {
                   <li key={item}>
                     <button
                       onClick={() => setActiveItem(item as ActiveItemType)}
-                      className={`flex items-center w-full text-left text-sm sm:text-base px-3 py-2 rounded-lg transition-all duration-300 ${
+                      className={`flex items-center w-full text-left text-sm cursor-pointer sm:text-base px-3 py-2 rounded-lg transition-all duration-300 ${
                         activeItem === item
                           ? "text-[#D9A444] bg-white/80 shadow-md font-medium animate-pulse-slow"
                           : "text-gray-700 hover:text-[#195769] hover:bg-white/50"
