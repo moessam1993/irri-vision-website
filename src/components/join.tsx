@@ -35,7 +35,7 @@ const Join = () => {
       })
       .catch((err) => {
         console.error('Failed to copy email: ', err);
-        // Fallback to mailto if clipboard fails
+        // Fallback to mailto if clipboard failss
         window.location.href = `mailto:${email}`;
       });
   };
