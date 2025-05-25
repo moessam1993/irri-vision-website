@@ -1,9 +1,6 @@
 import React, { useEffect } from 'react';
 import join from "../assets/join-us.png";
-import cult from "../assets/culture_.png";
 import now from "../assets/join.png";
-import impact from "../assets/impact.png";
-import work from "../assets/work.png";
 import culture from "../assets/culture.png";
 import right from "../assets/right.png";
 import { useNavigate } from 'react-router';
