@@ -9,7 +9,6 @@ lerna-debug.log*
 
 node_modules
 # Allow dist folder for deploy branch
-!dist/
 dist-ssr
 *.local
 
