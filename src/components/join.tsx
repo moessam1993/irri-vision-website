@@ -65,7 +65,7 @@ const Join = () => {
             href="https://linkedin.com/company/irri-vision" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="text-[#306E80] hover:text-[#195769] transition-colors duration-300 hover:scale-110 transition-transform"
+            className="text-[#306E80] hover:text-[#195769]  duration-300 hover:scale-110 transition-transform"
           >
             <img src={linked} alt="LinkedIn profile" className="w-30 h-29" />
           </a>
@@ -75,7 +75,7 @@ const Join = () => {
             href="https://www.facebook.com/irri.vision.llc" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="text-[#306E80] hover:text-[#195769] transition-colors duration-300 hover:scale-110 transition-transform"
+            className="text-[#306E80] hover:text-[#195769]  duration-300 hover:scale-110 transition-transform"
           >
             <img src={face} alt="Facebook profile" className="w-30 h-29" />
           </a>
@@ -84,7 +84,7 @@ const Join = () => {
           <a 
             href="mailto:info@irri-vision.com" 
             onClick={handleEmailClick}
-            className="text-[#306E80] hover:text-[#195769] transition-colors duration-300 hover:scale-110 transition-transform cursor-pointer"
+            className="text-[#306E80] hover:text-[#195769] duration-300 hover:scale-110 transition-transform cursor-pointer"
           >
             <img src={mail} alt="Email contact" className="w-30 h-29" />
           </a>
