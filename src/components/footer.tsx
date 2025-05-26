@@ -43,9 +43,9 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-gradient-to-r from-[#195769] to-[#306E80] text-white py-12 px-4 sm:px-6 font-sans">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Logo and Contact Info - Takes full width on mobile, 1/3 on larger screens */}
-          <div className="md:col-span-1">
+        <div className="flex flex-col md:flex-row justify-between">
+          {/* Left Column - Logo and Contact Info */}
+          <div className="md:w-1/2 mb-8 md:mb-0">
             <div className="flex flex-col h-full">
               <div className="flex items-center mb-6">
                 <img src={logo} alt="IRRI Vision Logo" className="h-12 w-12 mr-3" />
@@ -58,7 +58,7 @@ const Footer: React.FC = () => {
                 <p className="text-white text-sm">Landline: 0226038191</p>
               </div>
               
-              <div className="flex space-x-4 mb-6 md:mb-0">
+              <div className="flex space-x-4">
                 <a href="https://linkedin.com/company/irri-vision" target="_blank" rel="noopener noreferrer"
                   className="hover:scale-110 transition-transform duration-200">
                   <img src={linked} alt="LinkedIn" className="w-8 h-8" />
@@ -75,8 +75,8 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Company Links - Takes full width on mobile, 1/3 on larger screens */}
-          <div className="md:col-span-1">
+          {/* Right Column - Company Links */}
+          <div className="md:w-1/2 md:pl-50">
             <h4 className="text-xl font-semibold mb-4 font-inter">Company</h4>
             <ul className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
               <li>
@@ -153,9 +153,6 @@ const Footer: React.FC = () => {
                 </NavLink>
               </li>
             </ul>
-          </div>
-
-          <div className="hidden md:block md:col-span-1">
           </div>
         </div>
 

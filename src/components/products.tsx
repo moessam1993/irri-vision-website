@@ -90,7 +90,7 @@ const Products = () => {
                   alt="Learn more button" 
                   className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-cover" 
                 />
-                <span className="absolute inset-0 flex items-center justify-center text-white font-medium text-xs sm:text-sm md:text-base opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="absolute inset-0 flex items-center justify-center text-white font-medium text-xs sm:text-sm md:text-base opacity-0  transition-opacity duration-300">
                   Learn More
                 </span>
               </button>
@@ -139,7 +139,7 @@ const Products = () => {
                   alt="Learn more button" 
                   className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-cover" 
                 />
-                <span className="absolute inset-0 flex items-center justify-center text-white font-medium text-xs sm:text-sm md:text-base opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="absolute inset-0 flex items-center justify-center text-white font-medium text-xs sm:text-sm md:text-base opacity-0  transition-opacity duration-300">
                   Learn More
                 </span>
               </button>
@@ -172,7 +172,7 @@ const Products = () => {
                   alt="Learn more button" 
                   className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-cover" 
                 />
-                <span className="absolute inset-0 flex items-center justify-center text-white font-medium text-xs sm:text-sm md:text-base opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="absolute inset-0 flex items-center justify-center text-white font-medium text-xs sm:text-sm md:text-base opacity-0  transition-opacity duration-300">
                   Learn More
                 </span>
               </button>

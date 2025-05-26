@@ -3,11 +3,9 @@ import irri from "../assets/IRRI.svg";
 import underline from "../assets/underline.png";
 import vision from "../assets/vision.png";
 import mission from "../assets/mission.png";
-import founders from "../assets/founders.png";
+import founders from "../assets/contact.png";
 import ahmedFayez from "../assets/ahmed-fayez.png";
 import mohamedEssam from "../assets/mohamed-essam.png";
-import abdulrahmanAref from "../assets/aref.png";
-import mohamedMostafa from "../assets/mohamed-mostafa.png";
 import contact from "../assets/contact.png";
 import { useLocation } from 'react-router-dom';
 import Swal from 'sweetalert2';
@@ -278,13 +276,8 @@ const AboutUs = () => {
 
       {/* Contact Section */}
       <div className="flex flex-col items-center justify-center mb-10 md:mb-18">
-        <img 
-          src={contact} 
-          alt="Contact icon" 
-          className="h-30 w-30 md:h-38 md:w-38 mb-5 transition-transform duration-300 hover:scale-105 hidden-on-scroll fade-in-up animate-on-load" 
-        />
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#306E80] text-center mb-7 md:mb-11 hidden-on-scroll fade-in-up animate-on-load">
-          Contact us!
+        Get In Touch !
         </h2>
         
         <div className="w-full max-w-4xl bg-white rounded-xl shadow-sm p-7 md:p-9 hover:shadow-md transition-shadow duration-300 hidden-on-scroll fade-in-up animate-on-load">

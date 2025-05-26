@@ -28,14 +28,15 @@ const LandingPage: React.FC = () => {
         {/* Hero Section - Optimized for mobile */}
         <section className="bg-[#F5F7FA] py-6 md:py-16 px-4 sm:px-6">
           <div className="max-w-6xl mx-auto">
-            <div className="flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-10">
-              <div className="lg:w-1/2 w-full animate-fadeIn">
-                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 lg:mb-3 leading-tight">
-                  <span className="text-[#4D4D4D] block text-center lg:text-left">Revolutionizing Healthcare with the</span>
-                  <span className="text-[#195769] block mt-1 md:mt-2 text-center lg:text-left">Power of AI</span>
+            <div className="flex flex-col items-center lg:flex-row justify-between gap-4 lg:gap-10">
+              {/* Content - order changes on mobile */}
+              <div className="flex flex-col items-center lg:items-start w-full lg:w-1/2 order-2 lg:order-1 animate-fadeIn">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 lg:mb-3 leading-tight text-center lg:text-left">
+                  <span className="text-[#4D4D4D] block">Revolutionizing Healthcare with the</span>
+                  <span className="text-[#195769] block mt-1 md:mt-2">Power of AI</span>
                 </h1>
                 
-                <div className="flex flex-col sm:flex-row gap-3 mt-4 lg:mt-8 justify-center lg:justify-start">
+                <div className="flex flex-col sm:flex-row gap-3 mt-4 lg:mt-8 w-full justify-center lg:justify-start">
                   <button 
                     onClick={handleExploreClick}
                     className="flex items-center justify-center gap-2 text-white bg-[#195769] px-4 py-2 text-sm rounded-md font-semibold hover:bg-[#134252] transition-all duration-200 w-full sm:w-auto transform hover:scale-105 focus:outline-none active:scale-95 shadow-sm hover:shadow-md"
@@ -53,7 +54,8 @@ const LandingPage: React.FC = () => {
                 </div>
               </div>
 
-              <div className="lg:w-1/2 w-full flex justify-center mt-4 lg:mt-0 animate-slideInRight">
+              {/* Logo - appears first on mobile, then normal order on desktop */}
+              <div className="lg:w-1/2 w-full flex justify-center order-1 lg:order-2 mb-6 lg:mb-0 lg:mt-0 animate-slideInRight">
                 <img 
                   src={irri} 
                   alt="IRRI Logo" 
