@@ -38,6 +38,14 @@ const Blog = () => {
     { x: 40, y: 50, xSpeed: 0.15, ySpeed: -0.2, size: 80 }
   ]);
 
+  // Scroll to top when component mounts or activeItem changes
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }, [activeItem]);
+
   useEffect(() => {
     if (isTitleAnimating) {
       const fullTitle = "News & Blog: Latest Announcements";

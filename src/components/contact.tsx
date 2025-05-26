@@ -16,7 +16,7 @@ const Contact = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   const projectOptions = [
-    { value: 'OQFY', label: 'OQFY' },
+    { value: 'OQfy', label: 'OQfy' },
     { value: 'NON-AI', label: 'NON-AI' },
     { value: 'QUMRA', label: 'QUMRA' },
   ];
