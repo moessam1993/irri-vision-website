@@ -6,8 +6,6 @@ import mission from "../assets/mission.png";
 import founders from "../assets/contact.png";
 import ahmedFayez from "../assets/ahmed-fayez.png";
 import mohamedEssam from "../assets/mohamed-essam.png";
-// Remove this line since it's not being used
-// import contact from "../assets/contact.png";
 import { useLocation } from 'react-router-dom';
 import Swal from 'sweetalert2';
 

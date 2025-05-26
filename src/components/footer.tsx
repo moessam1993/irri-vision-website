@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom'; // Remove useNavigate
 import logo from "../assets/footerL.png";
 import linked from "../assets/linked.png";
 import facebook from "../assets/facebook.png";
@@ -7,12 +7,8 @@ import email from "../assets/email.png";
 import Swal from "sweetalert2";
 
 const Footer: React.FC = () => {
-  const navigate = useNavigate();
-
-  const scrollToFounders = (e: React.MouseEvent) => {
-    e.preventDefault();
-    navigate('/about-us', { state: { scrollTo: 'founders-section' } });
-  };
+  // Remove unused navigate declaration
+  // const navigate = useNavigate();
 
   const handleEmailClick = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -79,6 +75,18 @@ const Footer: React.FC = () => {
           <div className="md:w-1/2 md:pl-50">
             <h4 className="text-xl font-semibold mb-4 font-inter">Company</h4>
             <ul className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            <li>
+                <NavLink 
+                  to="/products" 
+                  className={({ isActive }) => 
+                    `font-inter font-medium transition-colors duration-200 block py-2 ${
+                      isActive ? 'text-blue-200' : 'text-white hover:text-blue-200'
+                    }`
+                  }
+                >
+                  Products
+                </NavLink>
+              </li>
               <li>
                 <NavLink 
                   to="/about-us" 
@@ -103,29 +111,18 @@ const Footer: React.FC = () => {
                   Blog
                 </NavLink>
               </li>
+
+
               <li>
                 <NavLink 
-                  to="/about-us" 
-                  onClick={scrollToFounders} 
+                  to="/contact-us" 
                   className={({ isActive }) => 
                     `font-inter font-medium transition-colors duration-200 block py-2 ${
                       isActive ? 'text-blue-200' : 'text-white hover:text-blue-200'
                     }`
                   }
                 >
-                  Leadership
-                </NavLink>
-              </li>
-              <li>
-                <NavLink 
-                  to="/products" 
-                  className={({ isActive }) => 
-                    `font-inter font-medium transition-colors duration-200 block py-2 ${
-                      isActive ? 'text-blue-200' : 'text-white hover:text-blue-200'
-                    }`
-                  }
-                >
-                  Products
+                  Contact us
                 </NavLink>
               </li>
               <li>
@@ -138,18 +135,6 @@ const Footer: React.FC = () => {
                   }
                 >
                   Careers
-                </NavLink>
-              </li>
-              <li>
-                <NavLink 
-                  to="/contact-us" 
-                  className={({ isActive }) => 
-                    `font-inter font-medium transition-colors duration-200 block py-2 ${
-                      isActive ? 'text-blue-200' : 'text-white hover:text-blue-200'
-                    }`
-                  }
-                >
-                  Contact us
                 </NavLink>
               </li>
             </ul>
