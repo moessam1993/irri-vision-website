@@ -105,19 +105,6 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <NavLink 
-                  to="/about-us" 
-                  onClick={scrollToFounders} 
-                  className={({ isActive }) => 
-                    `font-inter font-medium transition-colors duration-200 block py-2 ${
-                      isActive ? 'text-blue-200' : 'text-white hover:text-blue-200'
-                    }`
-                  }
-                >
-                  Leadership
-                </NavLink>
-              </li>
-              <li>
-                <NavLink 
                   to="/products" 
                   className={({ isActive }) => 
                     `font-inter font-medium transition-colors duration-200 block py-2 ${
