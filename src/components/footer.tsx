@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import logo from "../assets/footerL.png";
 import linked from "../assets/linked.png";
 import facebook from "../assets/facebook.png";
@@ -7,13 +7,6 @@ import email from "../assets/email.png";
 import Swal from "sweetalert2";
 
 const Footer: React.FC = () => {
-  const navigate = useNavigate();
-
-  const scrollToFounders = (e: React.MouseEvent) => {
-    e.preventDefault();
-    navigate('/about-us', { state: { scrollTo: 'founders-section' } });
-  };
-
   const handleEmailClick = (e: React.MouseEvent) => {
     e.preventDefault();
     const email = "info@irri-vision.com";

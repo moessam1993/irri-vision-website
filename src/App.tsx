@@ -9,6 +9,7 @@ import Careers from './components/careers';
 import Join from './components/join';
 import Contact from './components/contact';
 import Blog from './components/blog';
+import LimitedEarlyAccess from './components/limited_early_access';
 
 const App: React.FC = () => {
   return (
@@ -24,6 +25,7 @@ const App: React.FC = () => {
             <Route path="/join" element={<Join />} />
             <Route path="/contact-us" element={<Contact />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/limited-early-access" element={<LimitedEarlyAccess />} />
           </Routes>
         </main>
         <Footer />
