@@ -3,6 +3,8 @@ interface ContactFormData {
   email: string;
   phoneNumber: string;
   project: string;
+  specialty: string;
+  specialtyOther?: string;
   message: string;
 }
 
