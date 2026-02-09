@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
 
 const LimitedEarlyAccess = () => {
   useEffect(() => {
@@ -25,12 +24,14 @@ const LimitedEarlyAccess = () => {
                 ⏳ Registration closes in 48 hours. Early access is limited, so if you are an ophthalmologist or your speciality is related to ophthalmology, such as neonatologists who are dealing with ROP cases, join us now!
               </p>
             </div>
-            <Link
-              to="/contact-us"
+            <a
+              href="https://forms.gle/uzHhvC3HYue4SCUv8"
+              target="_blank"
+              rel="noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-gradient-to-r from-[#195769] to-[#144552] text-white font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02]"
             >
               Request Early Access
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -136,12 +137,14 @@ const LimitedEarlyAccess = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               If you’re interested in being involved early, request access now.
             </h2>
-            <Link
-              to="/contact-us"
+            <a
+              href="https://forms.gle/uzHhvC3HYue4SCUv8"
+              target="_blank"
+              rel="noreferrer"
               className="inline-flex items-center justify-center px-10 py-4 rounded-xl bg-white text-[#195769] font-bold text-lg shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]"
             >
               Request Early Access
-            </Link>
+            </a>
           </div>
         </div>
       </section>

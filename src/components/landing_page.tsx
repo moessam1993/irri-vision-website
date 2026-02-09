@@ -62,12 +62,14 @@ const LandingPage: React.FC = () => {
                       >
                         {earlyAccessAnnouncement.preview.readLabel}
                       </button>
-                      <button
-                        onClick={() => navigate("/contact-us")}
+                      <a
+                        href="https://forms.gle/uzHhvC3HYue4SCUv8"
+                        target="_blank"
+                        rel="noreferrer"
                         className="flex items-center justify-center px-4 py-2.5 rounded-lg border border-white/70 text-white font-semibold hover:bg-white/10 transition-colors w-full sm:w-auto"
                       >
                         {earlyAccessAnnouncement.preview.requestLabel}
-                      </button>
+                      </a>
                     </div>
                   </div>
                 </div>
