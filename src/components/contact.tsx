@@ -10,6 +10,8 @@ const Contact = () => {
     email: '',
     phoneNumber: '',
     project: '',
+    specialty: '',
+    specialtyOther: '',
     message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -50,7 +52,8 @@ const Contact = () => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: value,
+      ...(name === 'specialty' && value !== 'OTHER' ? { specialtyOther: '' } : {})
     }));
   };
 
@@ -62,7 +65,7 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!formData.name || !formData.email || !formData.phoneNumber || !formData.project) {
+    if (!formData.name || !formData.email || !formData.phoneNumber || !formData.project || !formData.specialty) {
       Swal.fire({
         title: 'Missing Information',
         text: 'Please fill in all required fields',
@@ -75,6 +78,16 @@ const Contact = () => {
           no-repeat
         `,
         confirmButtonText: 'Got it!'
+      });
+      return;
+    }
+
+    if (formData.specialty === 'OTHER' && !formData.specialtyOther.trim()) {
+      Swal.fire({
+        title: 'Missing Information',
+        text: 'Please enter your specialty',
+        icon: 'error',
+        confirmButtonColor: '#195769'
       });
       return;
     }
@@ -109,6 +122,8 @@ const Contact = () => {
         email: '',
         phoneNumber: '',
         project: '',
+        specialty: '',
+        specialtyOther: '',
         message: '',
       });
     } catch (error) {
@@ -235,6 +250,46 @@ const Contact = () => {
                         ))}
                       </select>
                     </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="space-y-1">
+                      <label htmlFor="specialty" className="block text-xs font-medium text-gray-700">
+                        Specialty <span className="text-red-500">*</span>
+                      </label>
+                      <select
+                        id="specialty"
+                        name="specialty"
+                        value={formData.specialty}
+                        onChange={handleChange}
+                        className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-[#195769] focus:border-transparent transition-all appearance-none bg-white"
+                        required
+                      >
+                        <option value="">Select a specialty</option>
+                        <option value="OPHTHALMOLOGIST">Ophthalmologist</option>
+                        <option value="OTHER">Other</option>
+                      </select>
+                    </div>
+
+                    {formData.specialty === 'OTHER' ? (
+                      <div className="space-y-1">
+                        <label htmlFor="specialtyOther" className="block text-xs font-medium text-gray-700">
+                          Please specify <span className="text-red-500">*</span>
+                        </label>
+                        <input
+                          type="text"
+                          id="specialtyOther"
+                          name="specialtyOther"
+                          value={formData.specialtyOther}
+                          onChange={handleChange}
+                          className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-[#195769] focus:border-transparent transition-all"
+                          placeholder="Your specialty"
+                          required
+                        />
+                      </div>
+                    ) : (
+                      <div />
+                    )}
                   </div>
 
                   <div className="space-y-1">

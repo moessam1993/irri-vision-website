@@ -6,6 +6,7 @@ import software from "../assets/software.png";
 import loading from "../assets/Loading.png";
 import join from "../assets/join.png";
 import useScrollAnimation from '../components/useScrollAnimation';
+import { earlyAccessAnnouncement } from '../data/early_access_announcement';
 
 const LandingPage: React.FC = () => {
   const isVisible = useScrollAnimation();
@@ -21,20 +22,57 @@ const LandingPage: React.FC = () => {
   const handleExploreClick = () => {
     navigate("/products");
   };
+  const handleEarlyAccessClick = () => {
+    navigate("/blog/limited-early-access");
+  };
 
   return (
     <div className="min-h-screen flex flex-col overflow-x-hidden">      
       <main className="flex-grow">
         {/* Hero Section - Optimized for mobile */}
-        <section className="bg-[#F5F7FA] py-6 md:py-16 px-4 sm:px-6">
-          <div className="max-w-6xl mx-auto">
+        <section className="bg-[#F5F7FA] py-6 md:py-16 px-4 sm:px-6 pt-10 md:pt-20">
+          <div className="max-w-[90rem] mx-auto">
             <div className="flex flex-col items-center lg:flex-row justify-between gap-4 lg:gap-10">
               {/* Content - order changes on mobile */}
-              <div className="flex flex-col items-center lg:items-start w-full lg:w-1/2 order-2 lg:order-1 animate-fadeIn">
+              <div className="flex flex-col items-center lg:items-start w-full lg:w-3/5 order-2 lg:order-1 animate-fadeIn">
                 <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 lg:mb-3 leading-tight text-center lg:text-left">
-                  <span className="text-[#4D4D4D] block">Revolutionizing Healthcare with the</span>
-                  <span className="text-[#195769] block mt-1 md:mt-2">Power of AI</span>
-                </h1>
+                  <span className="text-[#4D4D4D] block">Revolutionizing Healthcare with the Power of AI</span>
+                    </h1>
+
+                <div className="w-full mt-5 sm:mt-6 animate-fadeInUp">
+                  <div className="bg-gradient-to-r from-[#195769] to-[#144552] rounded-2xl shadow-lg p-5 sm:p-6 md:p-7 text-white flex flex-col gap-4 transition-transform duration-500 hover:-translate-y-1">
+                    <div>
+                      <p className="text-xs sm:text-sm uppercase tracking-widest font-semibold text-white/80 mb-2">
+                        {earlyAccessAnnouncement.preview.eyebrow}
+                      </p>
+                      <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-2">
+                        {earlyAccessAnnouncement.preview.headline}
+                      </h2>
+                      <p className="text-sm sm:text-base text-white/90 mb-2">
+                        {earlyAccessAnnouncement.preview.body}
+                      </p>
+                      <p className="text-sm sm:text-base font-semibold text-[#FDE68A]">
+                        {earlyAccessAnnouncement.preview.urgency}
+                      </p>
+                    </div>
+                    <div className="flex flex-col sm:flex-row gap-3 w-full">
+                      <button
+                        onClick={handleEarlyAccessClick}
+                        className="flex items-center justify-center px-4 py-2.5 rounded-lg bg-white text-[#195769] font-semibold shadow-md hover:bg-[#F3F4F6] transition-colors w-full sm:w-auto"
+                      >
+                        {earlyAccessAnnouncement.preview.readLabel}
+                      </button>
+                      <a
+                        href="https://forms.gle/uzHhvC3HYue4SCUv8"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="flex items-center justify-center px-4 py-2.5 rounded-lg border border-white/70 text-white font-semibold hover:bg-white/10 transition-colors w-full sm:w-auto"
+                      >
+                        {earlyAccessAnnouncement.preview.requestLabel}
+                      </a>
+                    </div>
+                  </div>
+                </div>
                 
                 <div className="flex flex-col sm:flex-row gap-3 mt-4 lg:mt-8 w-full justify-center lg:justify-start">
                   <button 
@@ -55,7 +93,7 @@ const LandingPage: React.FC = () => {
               </div>
 
               {/* Logo - appears first on mobile, then normal order on desktop */}
-              <div className="lg:w-1/2 w-full flex justify-center order-1 lg:order-2 mb-6 lg:mb-0 lg:mt-0 animate-slideInRight">
+              <div className="lg:w-2/5 w-full flex justify-center lg:justify-end order-1 lg:order-2 mb-6 lg:mb-0 lg:mt-0 animate-slideInRight">
                 <img 
                   src={irri} 
                   alt="IRRI Logo" 

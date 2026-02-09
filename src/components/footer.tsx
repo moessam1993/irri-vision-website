@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom'; // Remove useNavigate
+import { NavLink } from 'react-router-dom';
 import logo from "../assets/footerL.png";
 import linked from "../assets/linked.png";
 import facebook from "../assets/facebook.png";
@@ -7,9 +7,6 @@ import email from "../assets/email.png";
 import Swal from "sweetalert2";
 
 const Footer: React.FC = () => {
-  // Remove unused navigate declaration
-  // const navigate = useNavigate();
-
   const handleEmailClick = (e: React.MouseEvent) => {
     e.preventDefault();
     const email = "info@irri-vision.com";

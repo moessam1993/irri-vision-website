@@ -4,7 +4,6 @@ import oqfy from "../assets/oqfy.png";
 import button from "../assets/button.png";
 import nonai from "../assets/nonia.png";
 import qumra from "../assets/qumra.png";
-import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router';
 
 const Products = () => {
@@ -32,24 +31,6 @@ const Products = () => {
 
   const handleContactClick = () => {
     navigate("/contact-us");
-  };
-
-  const showComingSoonAlert = (productName: string) => {
-    Swal.fire({
-      title: `${productName} Coming Soon!`,
-      text: `We're currently working hard to bring you ${productName}. Stay tuned for updates!`,
-      icon: 'info',
-      iconColor: '#195769',
-      confirmButtonText: 'OK',
-      confirmButtonColor: '#195769',
-      background: '#ffffff',
-      backdrop: `
-        rgba(0,0,0,0.5)
-        url("/images/nyan-cat.gif")
-        left top
-        no-repeat
-      `
-    });
   };
 
   return (
@@ -132,7 +113,7 @@ const Products = () => {
             <div className="mt-2 md:mt-4">
               <button 
                 className="group relative overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-105 active:scale-95"
-                onClick={() => showComingSoonAlert("NON-AI")}
+                onClick={handleContactClick}
               >
                 <img 
                   src={button} 
@@ -165,7 +146,7 @@ const Products = () => {
             <div className="mt-2 md:mt-4">
               <button 
                 className="group relative overflow-hidden transition-transform duration-300 hover:scale-105 active:scale-95"
-                onClick={() => showComingSoonAlert("Qumra")}
+                onClick={handleContactClick}
               >
                 <img 
                   src={button} 

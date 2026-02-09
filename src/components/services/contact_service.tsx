@@ -3,16 +3,16 @@ interface ContactFormData {
   email: string;
   phoneNumber: string;
   project: string;
+  specialty: string;
+  specialtyOther?: string;
   message: string;
 }
 
 export const submitContactForm = async (formData: ContactFormData): Promise<{ message: string }> => {
   const apiUrl = 'https://aulqtsnpan4mfyrisj5tsacetm0vkcoz.lambda-url.us-east-1.on.aws/api/contact';
-  console.log('[ContactService] Attempting to submit form data to:', apiUrl);
-  console.log('[ContactService] Request payload:', formData);
+
 
   try {
-    console.log('[ContactService] Initiating fetch request...');
     const response = await fetch(apiUrl, {
       method: 'POST',
       headers: {
@@ -21,7 +21,6 @@ export const submitContactForm = async (formData: ContactFormData): Promise<{ me
       body: JSON.stringify(formData),
     });
 
-    console.log('[ContactService] Received response, status:', response.status);
     
     const responseData = await response.json();
     
@@ -30,7 +29,6 @@ export const submitContactForm = async (formData: ContactFormData): Promise<{ me
       throw new Error(responseData.message || `Server responded with status ${response.status}`);
     }
 
-    console.log('[ContactService] Successful response data:', responseData);
     return responseData;
   } catch (error) {
     console.error('[ContactService] Fetch error:', error);
