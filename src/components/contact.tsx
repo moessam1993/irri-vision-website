@@ -19,7 +19,7 @@ const Contact = () => {
 
   const projectOptions = [
     { value: 'OQfy', label: 'OQfy' },
-    { value: 'NON-AI', label: 'NON-AI' },
+    { value: 'OQgen', label: 'OQgen' },
     { value: 'QUMRA', label: 'QUMRA' },
   ];
 

@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import underline from "../assets/underline.png";
 import oqfy from "../assets/oqfy.png";
 import button from "../assets/button.png";
-import nonai from "../assets/nonia.png";
+import oqgen from "../assets/OQgen.png";
 import qumra from "../assets/qumra.png";
 import { useNavigate } from 'react-router';
 
@@ -88,14 +88,14 @@ const Products = () => {
         </div>
       </div>
 
-      {/* NON-AI Product - Reversed Layout */}
+      {/* OQgen Product - Reversed Layout */}
       <div className="mb-16 sm:mb-20 md:mb-28 lg:mb-32 px-4 sm:px-6 md:px-8 lg:px-10">
         <div className="flex flex-col md:flex-row gap-6 md:gap-8 lg:gap-10 items-center">
           {/* Image */}
           <div className="flex-1 flex justify-center hidden-on-scroll slide-in-left animate-on-load px-2 sm:px-4">
             <img 
-              src={nonai} 
-              alt="NON-AI product image" 
+              src={oqgen} 
+              alt="OQgen product image" 
               className="h-48 sm:h-56 md:h-64 lg:h-80 xl:h-96 w-auto object-contain transition-transform duration-500 hover:scale-105" 
             />
           </div>
@@ -103,12 +103,12 @@ const Products = () => {
           <div className="flex-1 flex flex-col items-start md:items-end text-left md:text-right hidden-on-scroll slide-in-right animate-on-load px-2 sm:px-4">
             <div className="mb-3 md:mb-4 w-full">
               <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-black font-serif">
-                NON-AI - Neural Ocular Network-AI
+                OQgen - Neural Ocular Network-AI
               </h2>
               <div className="border-b border-2 rounded-xl border-[#195769] w-full max-w-[250px] sm:max-w-[300px] mt-1 md:mt-2 md:ml-auto"></div>
             </div>
             <p className="text-xs sm:text-sm md:text-base lg:text-lg font-inter text-[#4D4D4D] mb-4 md:mb-6">
-              NON-AI is an advanced diagnostic platform that uses AI to detect ophthalmic conditions from medical imaging with exceptional speed and accuracy. Currently focused on Retinopathy of Prematurity (ROP), NON-AI can diagnose a case in under 2 seconds, identifying zones and stages with clinical-grade precision. It bridges the critical gap between neonatal care centers and the global shortage of ROP experts, making early detection and intervention possible—especially in underserved areas. NON-AI is not just a tool—it's a continuously evolving AI ecosystem designed to one day detect all major ophthalmic diseases.
+              OQgen is an advanced diagnostic platform that uses AI to detect ophthalmic conditions from medical imaging with exceptional speed and accuracy. Currently focused on Retinopathy of Prematurity (ROP), OQgen can diagnose a case in under 2 seconds, identifying zones and stages with clinical-grade precision. It bridges the critical gap between neonatal care centers and the global shortage of ROP experts, making early detection and intervention possible—especially in underserved areas. OQgen is not just a tool—it's a continuously evolving AI ecosystem designed to one day detect all major ophthalmic diseases.
             </p>
             <div className="mt-2 md:mt-4">
               <button 
