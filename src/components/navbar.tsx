@@ -2,17 +2,11 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import irri from "../assets/IRRI.svg";
 import { useNavigate } from 'react-router';
-import now from "../assets/join.png";
 import { FiX } from 'react-icons/fi';
 
 const Navbar: React.FC = () => {
   const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const handleJoinClick = () => {
-    navigate("/join");
-    setIsMobileMenuOpen(false);
-  };
 
   const handleLogoClick = () => {
     navigate("/");
@@ -27,7 +21,6 @@ const Navbar: React.FC = () => {
     { path: "/", label: "Home" },
     { path: "/products", label: "Products" },
     { path: "/blog", label: "Blog" },
-    { path: "/careers", label: "Careers" },
     { path: "/about-us", label: "About" },
     { path: "/contact-us", label: "Contact Us" }
   ];
@@ -69,28 +62,8 @@ const Navbar: React.FC = () => {
             ))}
           </div>
         </div>
-        
-        {/* Join Now Button (Desktop) */}
-        <div className="hidden md:flex">
-          <button 
-            className="flex items-center cursor-pointer justify-center gap-2 text-white bg-[#195769] px-4 py-2 text-sm rounded font-semibold hover:bg-[#134252] transition-all duration-200 min-w-[102px] transform hover:scale-105 focus:outline-none active:scale-95"
-            onClick={handleJoinClick}
-          >
-            <img src={now} alt="Join icon" className="h-4 w-4" />
-            <span>Join Now</span>
-          </button>
-        </div>
-        
         {/* Mobile Menu Button */}
         <div className="flex items-center md:hidden gap-4">
-          {/* Join Now Button (Mobile - small) */}
-          <button 
-            className="flex md:hidden items-center justify-center text-white bg-[#195769] p-2 rounded-full font-semibold hover:bg-[#134252] transition-all duration-200 focus:outline-none"
-            onClick={handleJoinClick}
-          >
-            <img src={now} alt="Join icon" className="h-4 w-4" />
-          </button>
-          
           {/* Hamburger Button */}
           <button 
             onClick={toggleMobileMenu}
@@ -128,13 +101,6 @@ const Navbar: React.FC = () => {
                 {link.label}
               </NavLink>
             ))}
-            <button 
-              className="flex items-center justify-center gap-2 text-white bg-[#195769] px-4 py-3 text-lg rounded-lg font-semibold hover:bg-[#134252] transition-all duration-200 mt-4"
-              onClick={handleJoinClick}
-            >
-              <img src={now} alt="Join icon" className="h-5 w-5" />
-              <span>Join Now</span>
-            </button>
           </div>
         </div>
       )}

@@ -1,6 +1,4 @@
 import { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
-import { earlyAccessAnnouncement } from '../data/early_access_announcement';
 import blog from "../assets/blog.png";
 import teamImage1 from "../assets/degla/1.png";
 import teamImage2 from "../assets/degla/3.png";
@@ -16,7 +14,7 @@ import teamImage12 from "../assets/degla/9.png";
 import teamImage13 from "../assets/degla/4.png";
 import teamImage14 from "../assets/degla/6.png";
 
-type ActiveItemType = "Limited Early Access" | "Company" | "First Team-Building Event";
+type ActiveItemType = "Company" | "First Team-Building Event";
 
 interface CirclePosition {
   x: number;
@@ -27,7 +25,7 @@ interface CirclePosition {
 }
 
 const Blog = () => {
-  const [activeItem, setActiveItem] = useState<ActiveItemType>("Limited Early Access");
+  const [activeItem, setActiveItem] = useState<ActiveItemType>("Company");
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
@@ -50,7 +48,7 @@ const Blog = () => {
 
   useEffect(() => {
     if (isTitleAnimating) {
-      const fullTitle = "News & Blog: Latest Announcements";
+      const fullTitle = "News & Blog: Latest Updates";
       let currentIndex = 0;
       
       const typeInterval = setInterval(() => {
@@ -134,29 +132,10 @@ const Blog = () => {
   };
 
   const contentMap: Record<ActiveItemType, React.ReactNode> = {
-    "Limited Early Access": (
-      <div className="px-4 py-3 sm:px-5 sm:py-4 bg-white/90 backdrop-blur-sm rounded-lg text-left shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1">
-        <h3 className="text-lg sm:text-xl font-semibold text-[#195769] mb-2 animate-fade-in">
-          {earlyAccessAnnouncement.blogPreview.title}
-        </h3>
-        <p className="text-base text-gray-700 mb-3">
-          {earlyAccessAnnouncement.blogPreview.body}
-        </p>
-        <p className="text-sm text-[#B45309] font-semibold mb-4">
-          {earlyAccessAnnouncement.blogPreview.urgency}
-        </p>
-        <Link
-          to="/blog/limited-early-access"
-          className="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-[#195769] text-white font-semibold shadow-md hover:bg-[#144552] transition-colors"
-        >
-          {earlyAccessAnnouncement.blogPreview.readLabel}
-        </Link>
-      </div>
-    ),
     "Company": (
       <div className="px-4 py-3 sm:px-5 sm:py-4 bg-white/90 backdrop-blur-sm rounded-lg text-left shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 animate-pulse">
         <h3 className="text-lg font-normal font-inter text-black mb-1">
-          OQfy now is live !
+          IRRI Vision platform updates are now live.
         </h3>
       </div>
     ),
@@ -313,7 +292,7 @@ const Blog = () => {
                     Feed
                   </h2>
                   <ul className="space-y-2 sm:space-y-3 text-left px-2">
-                    {["Limited Early Access", "Company", "First Team-Building Event"].map((item) => (
+                    {["Company", "First Team-Building Event"].map((item) => (
                       <li key={item}>
                         <button
                           onClick={() => setActiveItem(item as ActiveItemType)}

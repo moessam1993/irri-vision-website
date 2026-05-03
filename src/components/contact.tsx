@@ -18,9 +18,8 @@ const Contact = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   const projectOptions = [
-    { value: 'OQfy', label: 'OQfy' },
-    { value: 'OQgen', label: 'OQgen' },
     { value: 'QUMRA', label: 'QUMRA' },
+    { value: 'GENERAL', label: 'General Inquiry' },
   ];
 
   useEffect(() => {

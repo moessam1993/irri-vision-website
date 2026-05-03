@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
       .then(() => {
         Swal.fire({
           title: 'Email copied!',
-          text: 'Feel free to send us your inquiry or CV. We look forward to hearing from you!',
+          text: 'Feel free to send us your inquiry. We look forward to hearing from you!',
           icon: 'success',
           confirmButtonColor: '#306E80',
           confirmButtonText: 'Got it!',
@@ -120,18 +120,6 @@ const Footer: React.FC = () => {
                   }
                 >
                   Contact us
-                </NavLink>
-              </li>
-              <li>
-                <NavLink 
-                  to="/careers" 
-                  className={({ isActive }) => 
-                    `font-inter font-medium transition-colors duration-200 block py-2 ${
-                      isActive ? 'text-blue-200' : 'text-white hover:text-blue-200'
-                    }`
-                  }
-                >
-                  Careers
                 </NavLink>
               </li>
             </ul>
