@@ -5,11 +5,8 @@ import AboutUs from './components/about_us';
 import Navbar from './components/navbar';
 import Footer from './components/footer'; 
 import Products from './components/products';
-import Careers from './components/careers';
-import Join from './components/join';
 import Contact from './components/contact';
 import Blog from './components/blog';
-import LimitedEarlyAccess from './components/limited_early_access';
 
 const App: React.FC = () => {
   return (
@@ -21,11 +18,8 @@ const App: React.FC = () => {
             <Route path="/" element={<LandingPage />} />
             <Route path="/about-us" element={<AboutUs />} />
             <Route path="/products" element={<Products />} />
-            <Route path="/careers" element={<Careers />} />
-            <Route path="/join" element={<Join />} />
             <Route path="/contact-us" element={<Contact />} />
             <Route path="/blog" element={<Blog />} />
-            <Route path="/blog/limited-early-access" element={<LimitedEarlyAccess />} />
           </Routes>
         </main>
         <Footer />
