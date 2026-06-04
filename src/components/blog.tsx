@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import blog from "../assets/blog.png";
-import edafaAcquisition from "../assets/Edafa Acquistion.png";
+import edafaAcquisition from "../assets/edafa-acquisition.png";
 import teamImage1 from "../assets/degla/1.png";
 import teamImage2 from "../assets/degla/3.png";
 import teamImage3 from "../assets/degla/5.png";
@@ -15,7 +15,7 @@ import teamImage12 from "../assets/degla/9.png";
 import teamImage13 from "../assets/degla/4.png";
 import teamImage14 from "../assets/degla/6.png";
 
-type ActiveItemType = "Company" | "First Team-Building Event" | "Edafa VC Partnership";
+type ActiveItemType = "First Team-Building Event" | "Edafa VC Partnership";
 
 interface CirclePosition {
   x: number;
@@ -162,20 +162,6 @@ const Blog = () => {
         <p className="text-base text-gray-700 mb-4">
           The journey continues, and we are more excited than ever for what lies ahead.
         </p>
-        <div className="flex flex-wrap gap-2 mt-4">
-          {["#IRRIVision", "#EdafaVC", "#HealthTech", "#AI", "#AIEverythingMEAEgypt", "#StartupEcosystem", "#Innovation"].map(tag => (
-            <span key={tag} className="text-sm font-medium text-[#195769] bg-[#195769]/10 px-2 py-1 rounded">
-              {tag}
-            </span>
-          ))}
-        </div>
-      </div>
-    ),
-    "Company": (
-      <div className="px-4 py-3 sm:px-5 sm:py-4 bg-white/90 backdrop-blur-sm rounded-lg text-left shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 animate-pulse">
-        <h3 className="text-lg font-normal font-inter text-black mb-1">
-          IRRI Vision platform updates are now live.
-        </h3>
       </div>
     ),
     "First Team-Building Event": (
@@ -331,7 +317,7 @@ const Blog = () => {
                     Feed
                   </h2>
                   <ul className="space-y-2 sm:space-y-3 text-left px-2">
-                    {["Edafa VC Partnership", "Company", "First Team-Building Event"].map((item) => (
+                    {["Edafa VC Partnership", "First Team-Building Event"].map((item) => (
                       <li key={item}>
                         <button
                           onClick={() => setActiveItem(item as ActiveItemType)}
