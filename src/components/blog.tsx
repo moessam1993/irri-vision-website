@@ -160,13 +160,6 @@ const Blog = () => {
         <p className="text-base text-gray-700 mb-4">
           We look forward to the next chapter of growth, innovation, and impact.
         </p>
-        <div className="flex flex-wrap gap-2 mt-4">
-          {["#IRRIVision", "#EdafaVC", "#StrategicPartnership", "#HealthTech", "#ArtificialIntelligence", "#DigitalHealth", "#AIEverythingMEAEgypt", "#Innovation"].map(tag => (
-            <span key={tag} className="text-sm font-medium text-[#195769] bg-[#195769]/10 px-2 py-1 rounded">
-              {tag}
-            </span>
-          ))}
-        </div>
       </div>
     ),
     "First Team-Building Event": (
