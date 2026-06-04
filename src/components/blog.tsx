@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import blog from "../assets/blog.png";
-import edafaAcquisition from "../assets/edafa-acquisition.png";
+import edafaPartnership from "../assets/edafa-partnership.png";
 import teamImage1 from "../assets/degla/1.png";
 import teamImage2 from "../assets/degla/3.png";
 import teamImage3 from "../assets/degla/5.png";
@@ -136,32 +136,37 @@ const Blog = () => {
     "Edafa VC Partnership": (
       <div className="px-4 py-3 sm:px-5 sm:py-4 bg-white/90 backdrop-blur-sm rounded-lg text-left shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1">
         <h3 className="text-lg sm:text-xl font-semibold text-[#195769] mb-3 animate-fade-in">
-          IRRI Vision Joins Edafa Venture Capital Portfolio
+          Strategic Partnership: IRRI Vision & Edafa Venture Capital
         </h3>
-        <div className="mb-6 overflow-hidden rounded-lg shadow-md group cursor-pointer" onClick={() => openImageModal(edafaAcquisition)}>
+        <div className="mb-6 overflow-hidden rounded-lg shadow-md group cursor-pointer" onClick={() => openImageModal(edafaPartnership)}>
           <img 
-            src={edafaAcquisition} 
+            src={edafaPartnership} 
             alt="Edafa Venture Capital Partnership" 
             className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
           />
         </div>
-        <p className="text-base text-gray-700 mb-4 font-semibold italic">
-          A proud moment for the IRRI Vision team.
+        <p className="text-base text-gray-700 mb-4">
+          We are proud to announce a strategic partnership between <span className="font-semibold">IRRI Vision</span> and <span className="font-semibold">Edafa Venture Capital</span>.
         </p>
         <p className="text-base text-gray-700 mb-3">
-          We are excited to announce that IRRI Vision has joined the 
-          <span className="font-semibold"> Edafa Venture Capital portfolio</span>, 
-          marking a significant milestone in our journey to build the future of AI-driven ophthalmology and digital healthcare.
+          This partnership represents a shared commitment to advancing AI-powered healthcare innovation and accelerating the development of transformative technologies in ophthalmology and digital health.
         </p>
         <p className="text-base text-gray-700 mb-3">
-          We are deeply grateful to Edafa VC for their confidence, partnership, and commitment to supporting innovative Egyptian startups with global potential.
+          We extend our sincere gratitude to Edafa VC for their trust, vision, and belief in our mission.
         </p>
         <p className="text-base text-gray-700 mb-3">
-          Special thanks to <span className="font-semibold">AI Everything MEA Egypt</span> for providing the platform that made this connection possible and for fostering meaningful opportunities between startups and investors.
+          Special thanks to <span className="font-semibold">AI Everything MEA Egypt</span> for creating the opportunity that brought innovators, investors, and industry leaders together, turning meaningful connections into impactful collaborations.
         </p>
         <p className="text-base text-gray-700 mb-4">
-          The journey continues, and we are more excited than ever for what lies ahead.
+          We look forward to the next chapter of growth, innovation, and impact.
         </p>
+        <div className="flex flex-wrap gap-2 mt-4">
+          {["#IRRIVision", "#EdafaVC", "#StrategicPartnership", "#HealthTech", "#ArtificialIntelligence", "#DigitalHealth", "#AIEverythingMEAEgypt", "#Innovation"].map(tag => (
+            <span key={tag} className="text-sm font-medium text-[#195769] bg-[#195769]/10 px-2 py-1 rounded">
+              {tag}
+            </span>
+          ))}
+        </div>
       </div>
     ),
     "First Team-Building Event": (
