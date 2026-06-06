@@ -70,12 +70,7 @@ const Contact = () => {
         text: 'Please fill in all required fields',
         icon: 'error',
         confirmButtonColor: '#195769',
-        backdrop: `
-          rgba(25, 87, 105, 0.1)
-          url("/images/nyan-cat.gif")
-          center top
-          no-repeat
-        `,
+        backdrop: 'rgba(25, 87, 105, 0.15)',
         confirmButtonText: 'Got it!'
       });
       return;

@@ -7,6 +7,7 @@ import Footer from './components/footer';
 import Products from './components/products';
 import Contact from './components/contact';
 import Blog from './components/blog';
+import NotFound from './components/NotFound';
 
 const App: React.FC = () => {
   return (
@@ -20,6 +21,7 @@ const App: React.FC = () => {
             <Route path="/products" element={<Products />} />
             <Route path="/contact-us" element={<Contact />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />

@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router';
 import irri from "../assets/IRRI.svg";
 import hardware from "../assets/hardware.png";
-import loading from "../assets/Loading.png";
 import useScrollAnimation from '../components/useScrollAnimation';
+import { ArrowRight } from 'lucide-react';
 
 const LandingPage: React.FC = () => {
   const isVisible = useScrollAnimation();
@@ -21,22 +21,26 @@ const LandingPage: React.FC = () => {
     <div className="min-h-screen flex flex-col overflow-x-hidden">      
       <main className="flex-grow">
         {/* Hero Section - Optimized for mobile */}
-        <section className="bg-[#F5F7FA] py-6 md:py-16 px-4 sm:px-6 pt-10 md:pt-20">
-          <div className="max-w-[90rem] mx-auto">
+        <section className="relative bg-[#F8FAFC] bg-tech-grid py-6 md:py-16 px-4 sm:px-6 pt-10 md:pt-20 overflow-hidden">
+          {/* Ambient Optics Glow */}
+          <div className="absolute top-1/4 right-1/4 w-[300px] h-[300px] rounded-full bg-[#195769]/10 animate-optic-pulse pointer-events-none" />
+          <div className="absolute bottom-10 left-10 w-[200px] h-[200px] rounded-full bg-[#D9A444]/5 animate-optic-pulse pointer-events-none" style={{ animationDelay: '-4s' }} />
+
+          <div className="relative max-w-[90rem] mx-auto z-10">
             <div className="flex flex-col items-center lg:flex-row justify-between gap-4 lg:gap-10">
               {/* Content - order changes on mobile */}
               <div className="flex flex-col items-center lg:items-start w-full lg:w-3/5 order-2 lg:order-1 animate-fadeIn">
-                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 lg:mb-3 leading-tight text-center lg:text-left">
+                <h1 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-3 lg:mb-3 leading-tight text-center lg:text-left">
                   <span className="text-[#4D4D4D] block">Revolutionizing Healthcare with the Power of AI</span>
                 </h1>
                 
                 <div className="flex flex-col sm:flex-row gap-3 mt-4 lg:mt-8 w-full justify-center lg:justify-start">
                   <button 
                     onClick={handleExploreClick}
-                    className="flex items-center justify-center gap-2 text-white bg-[#195769] px-4 py-2 text-sm rounded-md font-semibold hover:bg-[#134252] transition-all duration-200 w-full sm:w-auto transform hover:scale-105 focus:outline-none active:scale-95 shadow-sm hover:shadow-md"
+                    className="group flex items-center justify-center gap-2 text-white bg-[#195769] px-4 py-2 text-sm rounded-md font-semibold hover:bg-[#134252] transition-all duration-200 w-full sm:w-auto transform hover:scale-105 focus:outline-none active:scale-95 shadow-sm hover:shadow-md"
                   >
-                    <img src={loading} alt="loading" className="h-4 w-4 animate-spin" />
                     <span>Explore our products</span>
+                    <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
                   </button>
                 </div>
               </div>
@@ -57,7 +61,7 @@ const LandingPage: React.FC = () => {
         {/* Who We Are Section - Mobile optimized */}
         <section className="py-8 md:py-20 px-4 sm:px-6 bg-gradient-to-b from-[#FFFAE7] to-white max-w-full mx-auto animate-fadeInUp">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-center text-[#195769] mb-3 md:mb-4">Who are we?</h2>
+            <h2 className="font-display text-2xl sm:text-4xl md:text-5xl font-extrabold text-center text-[#195769] mb-3 md:mb-4">Who are we?</h2>
             <div className="text-center max-w-3xl mx-auto">
               <p className='text-[#4D4D4D] text-sm md:text-lg leading-relaxed'>
                 <span className='text-[#D9A444] font-bold'>IRRI Vision LLC</span> is an Egyptian health-tech company founded in 2024 by passionate pioneers in medical innovation. 
@@ -71,7 +75,7 @@ const LandingPage: React.FC = () => {
         {/* What We Do Section - Mobile optimized */}
         <section className="py-8 px-4 sm:px-6 bg-white">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-center text-[#195769] mb-6 md:mb-12">What we do</h2>
+            <h2 className="font-display text-2xl sm:text-4xl md:text-5xl font-extrabold text-center text-[#195769] mb-6 md:mb-12">What we do</h2>
             
             <div className="grid md:grid-cols-1 gap-4 md:gap-8 px-2 sm:px-0">
               <div 

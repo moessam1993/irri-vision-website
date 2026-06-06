@@ -195,8 +195,7 @@ const AboutUs = () => {
               Company's Vision
             </h2>
             <p className="text-base md:text-lg text-[#68686C] leading-relaxed">
-              "For more information on the Company's main business and products and design, you may
-              be a good thing to offer when needed in relation."
+              "To lead the global transition toward borderless, intelligent, and immersive eye care, ensuring vision health is accessible to everyone, everywhere, at any time."
             </p>
           </div>
         </div>
